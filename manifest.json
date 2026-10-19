@@ -1,13 +1,13 @@
 {
  "name": "Frases Belas",
  "short_name": "Frases Belas",
- "description": "Frases em português para o teu Status do WhatsApp.",
+ "description": "Mais de 20 mil frases em português para o teu Status do WhatsApp, Instagram, Facebook e TikTok, com fundos de paisagem e criação de frases personalizadas.",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
- "background_color": "#F2F4F9",
- "theme_color": "#14183A",
- "lang": "pt",
+ "background_color": "#F3F2FA",
+ "theme_color": "#0f0e2e",
+ "lang": "pt-MZ",
  "icons": [
   {
    "src": "icon-192.png",
@@ -27,5 +27,11 @@
    "type": "image/png",
    "purpose": "maskable"
   }
+ ],
+ "id": "./",
+ "orientation": "portrait",
+ "categories": [
+  "lifestyle",
+  "social"
  ]
 }
