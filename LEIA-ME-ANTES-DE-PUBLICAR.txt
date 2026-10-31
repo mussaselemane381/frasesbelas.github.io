@@ -1,0 +1,29 @@
+FRASES BELAS - VERSÃO INTEGRADA PARA GITHUB PAGES
+
+ESTRUTURA
+- index.html, sw.js, manifest.json, privacidade.html e avisos.json
+- data/puzzles.json: catálogo de 125 puzzles
+- data/fundos.json: catálogo de 118 fundos
+- assets/puzzles/: 125 fotografias
+- assets/backgrounds/: 118 fotografias
+- ícones PWA
+
+INTEGRAÇÃO FEITA
+- Ligação do puzzle ao catálogo JSON, com lista de reserva se o catálogo falhar.
+- Ligação dos fundos ao catálogo JSON, corrigindo os nomes fundo-001 a fundo-118.
+- Remoção da definição duplicada de bgOf.
+- O puzzle aguarda a imagem carregar antes de iniciar a partida.
+- Service worker actualizado: instala apenas o núcleo da aplicação e guarda imagens/JSON à medida que são pedidos; não descarrega as 243 imagens na instalação.
+- Preservados os jogos locais, as frases, o layout e os controlos existentes.
+
+PUBLICAÇÃO
+1. Abre o repositório https://github.com/frasesbelas/frasesbelas.github.io
+2. Envia o conteúdo deste ZIP para a raiz, mantendo a estrutura de pastas.
+3. Não apagues nem substituas os ficheiros f-*.json das frases já existentes no repositório.
+4. Aguarda o GitHub Pages actualizar e testa com Internet.
+
+IMPORTANTE
+Este pacote não contém os ficheiros f-*.json de frases porque devem ser preservados no repositório actual. Não publique apenas os ficheiros soltos sem as pastas data/ e assets/.
+
+VALIDAÇÃO
+Os ficheiros JSON, os caminhos dos 243 recursos e a sintaxe JavaScript foram verificados automaticamente. Não foi possível executar teste real no Android nem confirmar o comportamento no GitHub Pages publicado. O ícone incluído é o que acompanhava a versão-base recebida, não foi possível confirmar que seja a última variante visual aprovada. Publicidade/Adsterra não foi auditada nem alterada nesta integração.
