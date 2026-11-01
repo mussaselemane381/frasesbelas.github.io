@@ -1,0 +1,39 @@
+name: Importar correcao do Frases Belas
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Frases_Belas_Correcao_Completa_GitHub.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter repositorio
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extrair pacote para a raiz
+        run: |
+          test -f Frases_Belas_Correcao_Completa_GitHub.zip
+          unzip -o Frases_Belas_Correcao_Completa_GitHub.zip -d .
+          rm Frases_Belas_Correcao_Completa_GitHub.zip
+
+      - name: Guardar alteracoes no GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sem alteracoes para guardar."
+          else
+            git commit -m "Corrige fundos, instalacao, partilha e jogo de perguntas"
+            git push
+          fi
