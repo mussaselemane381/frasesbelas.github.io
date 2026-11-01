@@ -1,0 +1,22 @@
+FRASES BELAS - PACOTE DE CORRECCAO
+
+Este pacote parte do ZIP do repositório enviado pelo utilizador e preserva os ficheiros f-*.json e o arquivo com as 21.019 frases.
+
+CORRECCOES INCLUIDAS
+- Inclui os 118 fundos fotográficos e os 125 recursos de puzzle nos caminhos esperados pelo index.html.
+- Inclui data/fundos.json e data/puzzles.json. O HTML procurava estes caminhos, mas o ZIP original não continha as pastas data/ e assets/.
+- Botão de instalação permanece visível quando a aplicação não está instalada; se o navegador não oferecer instalação automática, apresenta instruções.
+- Partilha tenta abrir a folha nativa de partilha com a imagem; se o navegador não suportar partilha de ficheiros, guarda a imagem e informa como continuar.
+- Galeria do fundo da Frase do Dia e cartões das categorias passam a usar fotografias do catálogo.
+- Jogo de perguntas ganha campo de resposta, confirmação e bloqueio da pergunta seguinte até a resposta ser confirmada.
+
+PUBLICACAO
+1. Faz uma cópia de segurança do repositório.
+2. Envia o conteúdo deste ZIP para a raiz do repositório, mantendo as pastas assets/ e data/.
+3. Mantém todos os f-*.json existentes. Não elimines outros ficheiros de frases que estejam no GitHub.
+4. Depois de publicar, abre o site no Chrome. O Service Worker foi actualizado para limpar a cache anterior.
+
+LIMITES
+- Foram verificadas a presença dos recursos, os JSON, os caminhos e a sintaxe JavaScript.
+- Não foi possível testar em telemóvel real nem em todas as versões de Android/Chrome.
+- Instagram, TikTok, Facebook e WhatsApp controlam a recepção/publicação final. O site pode abrir a folha nativa de partilha quando suportada; não pode publicar automaticamente em contas pessoais.
